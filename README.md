@@ -22,13 +22,13 @@ jobs:
     - name: Run enforcer tool
       uses: github/advanced-security-enforcer@v1
       env:
-        GH_ACTOR='Put your email here'
-        GH_TOKEN='Put your token here'
-        ORGANIZATION='Put your organization name here'
-        PR_BODY='Put the text you want to appear in the pull request body'
+        GH_ACTOR: ${{ secrets.ACTOR }}
+        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        ORGANIZATION: ${{ secrets.ORGANIZATION }}
+        PR_BODY: your text goes here
 ```
-* Be sure to fill out the `env` values above with your information.
-* Your github token will need to have read/write access to all the repos in the organization
+-  Be sure to fill out the `env` values above with your information. More info on creating secrets can be found [here](https://docs.github.com/en/actions/security-guides/encrypted-secrets).
+-  Your GitHub token will need to have read/write access to all the repos in the organization
 
 ## How it does this
 - A CRON job on GitHub actions triggers a nightly run of this script

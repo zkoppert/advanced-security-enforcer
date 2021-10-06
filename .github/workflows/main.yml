@@ -1,7 +1,6 @@
 on: [push]
 
 jobs:
-  jobs:
   build:
     name: Enforce advanced security scanning
     runs-on: ubuntu-latest
@@ -13,7 +12,7 @@ jobs:
     - name: Run enforcer tool
       uses: github/advanced-security-enforcer@main
       env:
-        GH_ACTOR='Put your email here'
-        GH_TOKEN='Put your token here'
-        ORGANIZATION='Put your organization name here'
-        PR_BODY='Put the text you want to appear in the pull request body'
+        GH_ACTOR: ${{ secrets.ACTOR }}
+        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        ORGANIZATION: ${{ secrets.ORGANIZATION }}
+        PR_BODY: hi
