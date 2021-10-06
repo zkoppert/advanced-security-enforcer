@@ -23,7 +23,7 @@ jobs:
       uses: github/advanced-security-enforcer@v1
       env:
         GH_ACTOR: ${{ secrets.ACTOR }}
-        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GH_TOKEN: ${{ secrets.GH_TOKEN }}
         ORGANIZATION: ${{ secrets.ORGANIZATION }}
         PR_BODY: your text goes here
 ```
