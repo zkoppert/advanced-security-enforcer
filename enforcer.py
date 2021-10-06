@@ -10,6 +10,7 @@ from dotenv import load_dotenv
 if __name__ == "__main__":
 
     # Load env variables from file
+    print("starting")
     dotenv_path = join(dirname(__file__), ".env")
     load_dotenv(dotenv_path)
 
@@ -36,6 +37,7 @@ if __name__ == "__main__":
         "Python",
     ]
     all_repos = gh.search_repositories(search_string)
+    print("just got all_repos")
 
     for short_repository in all_repos:
         print(short_repository.full_name)
@@ -74,3 +76,4 @@ if __name__ == "__main__":
                 os.chdir("../")
                 os.system("rm -rf %s" % short_repository.name)
                 break
+    print("done")

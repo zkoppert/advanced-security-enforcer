@@ -9,4 +9,4 @@ RUN python3 -m pip install --no-cache-dir -r requirements.txt \
     && rm -rf /var/lib/apt/lists/*
 
 CMD ["enforcer.py"]
-ENTRYPOINT ["python3"]
+ENTRYPOINT ["python3", "-u"]
