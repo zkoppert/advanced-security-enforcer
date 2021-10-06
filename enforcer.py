@@ -23,7 +23,8 @@ if __name__ == "__main__":
     gh_actor = os.getenv("GH_ACTOR")
     date = (datetime.now() - timedelta(hours=24)).strftime("%Y-%m-%d")
     search_string = (
-        "org:" + str(organization) + " created:" + str(date) + " archived:false"
+        "org:" + str(organization) + " created:" +
+        str(date) + " archived:false"
     )
     allowed_languages = [
         "C",
@@ -56,12 +57,13 @@ if __name__ == "__main__":
                 os.system("cp ../codeql.yml .github/workflows/")
                 os.system("git add .github/workflows/codeql.yml")
                 # git commit that file
-                os.system("git commit -m'Request to add code scanning to repository'")
+                os.system(
+                    "git commit -m'Request to add code scanning to repository'")
                 # git push -u origin code-scanning
                 os.system("git push -u origin code-scanning")
                 # open a PR from that branch to the default branch
                 default_branch = short_repository.default_branch
-                pr_body = ""
+                pr_body = str(os.getenv("PR_BODY"))
                 short_repository.repository.create_pull(
                     "Request for Code Scanning",
                     default_branch,
