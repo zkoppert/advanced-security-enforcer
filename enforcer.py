@@ -10,7 +10,6 @@ from dotenv import load_dotenv
 if __name__ == "__main__":
 
     # Load env variables from file
-    print("starting")
     dotenv_path = join(dirname(__file__), ".env")
     load_dotenv(dotenv_path)
 
@@ -37,8 +36,9 @@ if __name__ == "__main__":
         "Python",
     ]
     all_repos = gh.search_repositories(search_string)
-    print("just got all_repos")
 
+    if len(all_repos) == 0:
+        print("no repos found")
     for short_repository in all_repos:
         print(short_repository.full_name)
         # check if the repo is compatible language using short_repository.languages_url
