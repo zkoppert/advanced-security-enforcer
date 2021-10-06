@@ -1,7 +1,7 @@
 # Advanced-Security-Enforcer
 
 ## What this repository does
-This code is for a GitHub Action to check on a schedule for new repositories and open pull requests in the new repositories for code scanning.
+This code is for a GitHub Action to check on a schedule for new repositories created in the last 24 hours and open pull requests in the new repositories for code scanning.
 
 ## Example workflow
 ```yaml
