@@ -22,7 +22,7 @@ jobs:
     - name: Run enforcer tool
       uses: github/advanced-security-enforcer@v1
       env:
-        GH_ACTOR: ${{ secrets.ACTOR }}
+        GH_ACTOR: ${{ secrets.GH_ACTOR }}
         GH_TOKEN: ${{ secrets.GH_TOKEN }}
         ORGANIZATION: ${{ secrets.ORGANIZATION }}
         PR_BODY: your text goes here
