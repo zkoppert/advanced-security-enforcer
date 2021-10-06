@@ -1,7 +1,8 @@
-FROM python:3.9.7-alpine as base_image
+FROM python:3
 
-COPY requirements.txt .
+COPY requirements.txt enforcer.py ./
 
 RUN python3 -m pip install --no-cache-dir -r requirements.txt
 
-ENTRYPOINT ["python", "enforcer.py"]
+CMD ["enforcer.py"]
+ENTRYPOINT ["python3"]
