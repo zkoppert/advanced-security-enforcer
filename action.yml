@@ -1,0 +1,10 @@
+---
+name: 'Advanced-Security-Enforcer'
+author: 'GitHub'
+description: 'A GitHub Action to check for new repositories and open pull requests in the new repositories for code scanning.'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+branding:
+  icon: 'check-square'
+  color: 'white'
