@@ -37,7 +37,7 @@ if __name__ == "__main__":
     ]
     all_repos = gh.search_repositories(search_string)
 
-    if len(all_repos) == 0:
+    if all_repos.count == 0:
         print("no repos found")
     for short_repository in all_repos:
         print(short_repository.full_name)
