@@ -1,5 +1,8 @@
 # Advanced-Security-Enforcer
-[![CodeQL](https://github.com/github/advanced-security-enforcer/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/github/advanced-security-enforcer/actions/workflows/codeql-analysis.yml) [![Docker Image CI](https://github.com/github/advanced-security-enforcer/actions/workflows/docker-image.yml/badge.svg)](https://github.com/github/advanced-security-enforcer/actions/workflows/docker-image.yml) [![.github/workflows/linter.yml](https://github.com/github/advanced-security-enforcer/actions/workflows/linter.yml/badge.svg)](https://github.com/github/advanced-security-enforcer/actions/workflows/linter.yml)
+[![CodeQL](https://github.com/github/advanced-security-enforcer/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/github/advanced-security-enforcer/actions/workflows/codeql-analysis.yml)
+[![Docker Image CI](https://github.com/github/advanced-security-enforcer/actions/workflows/docker-image.yml/badge.svg)](https://github.com/github/advanced-security-enforcer/actions/workflows/docker-image.yml)
+[![.github/workflows/linter.yml](https://github.com/github/advanced-security-enforcer/actions/workflows/linter.yml/badge.svg)](https://github.com/github/advanced-security-enforcer/actions/workflows/linter.yml)
+
 ## What this repository does
 This code is for an active GitHub Action written in Python to check (on a schedule) for new repositories created in the last 24 hours and open pull requests in the new repositories to enable GitHub advanced security code scanning.
 
