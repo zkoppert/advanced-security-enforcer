@@ -8,7 +8,9 @@ This code is for a GitHub Action to check on a schedule for new repositories cre
 name: Enforce advanced security scanning
 
 on:
-  pull-request:
+  repository_dispatch:
+  schedule:
+    - cron: '00 5 * * *'
 
 jobs:
   build:
