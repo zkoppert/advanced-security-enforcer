@@ -1,7 +1,10 @@
 # Advanced-Security-Enforcer
+[![CodeQL](https://github.com/github/advanced-security-enforcer/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/github/advanced-security-enforcer/actions/workflows/codeql-analysis.yml)
+[![Docker Image CI](https://github.com/github/advanced-security-enforcer/actions/workflows/docker-image.yml/badge.svg)](https://github.com/github/advanced-security-enforcer/actions/workflows/docker-image.yml)
+[![.github/workflows/linter.yml](https://github.com/github/advanced-security-enforcer/actions/workflows/linter.yml/badge.svg)](https://github.com/github/advanced-security-enforcer/actions/workflows/linter.yml)
 
 ## What this repository does
-This code is for a GitHub Action to check on a schedule for new repositories created in the last 24 hours and open pull requests in the new repositories for code scanning.
+This code is for an active GitHub Action written in Python to check (on a schedule) for new repositories created in the last 24 hours and open pull requests in the new repositories to enable GitHub advanced security code scanning.
 
 ## Example workflow
 ```yaml
@@ -37,6 +40,9 @@ jobs:
 - The script checks for new repositories by storing the known repositories to a file
 - It then iterates over new repositories and opens a pull request for the codeql.yml file stored in this repository
 
+## Contributions
+We would :heart: contributions to improve this action. Please see [CONTRIBUTING.md](./CONTRIBUTING.md) for how to get involved.
+
 ## Instructions to run locally
 - Clone the repository
 - Create a personal access token with read only permissions
@@ -46,3 +52,6 @@ jobs:
 - Run the code `python3 enforcer.py`
 - Note the log output for details on any pull requests that were opened
 - After running locally this will have changed your git config user.name and user.email so those should be reset for this repository
+
+## License
+[MIT](./LICENSE)
