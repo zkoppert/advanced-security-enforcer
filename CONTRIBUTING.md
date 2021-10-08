@@ -13,6 +13,7 @@ All types of contributions are encouraged and valued. See the [Table of Contents
 - [I Want To Contribute](#i-want-to-contribute)
 - [Reporting Bugs](#reporting-bugs)
 - [Suggesting Enhancements](#suggesting-enhancements)
+- [Releases](#releases)
 
 ## I Have a Question
 
@@ -86,3 +87,7 @@ Enhancement suggestions are tracked as [GitHub issues](https://github.com/github
 - **Describe the current behavior** and **explain which behavior you expected to see instead** and why. At this point you can also tell which alternatives do not work for you.
 - You may want to **include screenshots and animated GIFs** which help you demonstrate the steps or point out the part which the suggestion is related to.
 - **Explain why this enhancement would be useful** to most Advanced-Security-Enforcer users.
+
+## Releases
+
+To release a new version, maintainers are to release new versions following semantic versioning and via GitHub Releases.
