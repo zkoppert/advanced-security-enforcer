@@ -1,7 +1,7 @@
 FROM python:3.8-slim-buster
 
 WORKDIR /action/workspace
-COPY requirements.txt enforcer.py /action/workspace/
+COPY codeql.yml requirements.txt enforcer.py /action/workspace/
 
 RUN python3 -m pip install --no-cache-dir -r requirements.txt \
     && apt-get -y update \

@@ -48,7 +48,7 @@ We would :heart: contributions to improve this action. Please see [CONTRIBUTING.
 
 ## Instructions to run locally
 - Clone the repository
-- Create a personal access token with read only permissions
+- Create a personal access token with repo permissions and workflow permissions
 - Copy the `.env-example` file to `.env`
 - Edit the `.env` file by adding your Personal Access Token to it and the desired organization
 - Install dependencies `pip install -r requirements.txt`
