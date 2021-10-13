@@ -14,7 +14,7 @@ If you need support using this project or have questions about it, please [open 
 name: Enforce advanced security scanning
 
 on:
-  repository_dispatch:
+  workflow_dispatch:
   schedule:
     - cron: '00 5 * * *'
 
