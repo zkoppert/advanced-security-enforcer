@@ -36,7 +36,7 @@ jobs:
         PR_BODY: your text goes here
 ```
 - Be sure to fill out the `env` values above with your information. More info on creating secrets can be found [here](https://docs.github.com/en/actions/security-guides/encrypted-secrets).
-- Your GitHub token will need to have read/write access to all the repos in the organization
+- Your GitHub token will need to have read/write access to all the repositories in the organization
 
 ## How it does this
 - A CRON job on GitHub actions triggers a nightly run of this script
