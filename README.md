@@ -56,5 +56,13 @@ We would :heart: contributions to improve this action. Please see [CONTRIBUTING.
 - Note the log output for details on any pull requests that were opened
 - After running locally this will have changed your git config user.name and user.email so those should be reset for this repository
 
+## Docker debug instructions
+- Install Docker and make sure docker engine is running
+- cd to the repository
+- Edit the Dockerfile to enable interactive docker debug as instructed in the comments of the file
+- `docker build -t test .`
+- `docker run -it test`
+- Now you should be at a command prompt inside your docker container and you can begin debugging
+
 ## License
 [MIT](./LICENSE)
