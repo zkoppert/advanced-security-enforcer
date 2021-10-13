@@ -96,7 +96,7 @@ Once the code is ready to release please do the following
 2. Ensure that the versioning is is correct given the content of the release
 3. Check the box to release it to the GitHub Marketplace
 4. Publish the release
-5. Clone the repo at the release tag locally or in a codespace
+5. Clone the repository at the release tag locally or in a codespace
 6. Authenticate to ghcr.io using [these instructions](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-container-registry#authenticating-to-the-container-registry)
 7. `docker build -t ghcr.io/zkoppert/advanced-security-enforcer:v1 .` where v1 is the current major version number
 8. `docker push ghcr.io/zkoppert/advanced-security-enforcer:v1` where v1 is the current major version number
