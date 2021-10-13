@@ -55,7 +55,7 @@ if __name__ == "__main__":
                 # git add the code-scanning file
                 os.system("mkdir -p .github/workflows")
                 # Copy the default configuration file to the proper directory
-                os.system("cp ../codeql.yml .github/workflows/")
+                os.system("cp /action/workspace/codeql.yml .github/workflows/")
                 os.system("git add .github/workflows/codeql.yml")
                 # git commit that file
                 os.system(
