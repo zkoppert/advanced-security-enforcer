@@ -91,3 +91,13 @@ Enhancement suggestions are tracked as [GitHub issues](https://github.com/github
 ## Releases
 
 To release a new version, maintainers are to release new versions following semantic versioning and via GitHub Releases.
+Once the code is ready to release please do the following
+1. Create a [GitHub release](https://github.com/zkoppert/advanced-security-enforcer/releases) based off the current draft and review release notes
+2. Ensure that the versioning is is correct given the content of the release
+3. Check the box to release it to the GitHub Marketplace
+4. Publish the release
+5. Clone the repo at the release tag locally or in a codespace
+6. Authenticate to ghcr.io using [these instructions](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-container-registry#authenticating-to-the-container-registry)
+7. `docker build -t ghcr.io/zkoppert/advanced-security-enforcer:v1 .` where v1 is the current major version number
+8. `docker push ghcr.io/zkoppert/advanced-security-enforcer:v1` where v1 is the current major version number
+9. Update the `README.md` instructions to point to the new docker container
