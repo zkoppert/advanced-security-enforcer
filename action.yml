@@ -4,7 +4,7 @@ author: 'zkoppert'
 description: 'A GitHub Action to check for new repositories and open pull requests in the new repositories for code scanning.'
 runs:
   using: 'docker'
-  image: 'Dockerfile'
+  image: 'docker://ghcr.io/zkoppert/advanced-security-enforcer:v1'
 branding:
   icon: 'check-square'
   color: 'white'
