@@ -4,7 +4,7 @@
 [![.github/workflows/linter.yml](https://github.com/zkoppert/advanced-security-enforcer/actions/workflows/linter.yml/badge.svg)](https://github.com/zkoppert/advanced-security-enforcer/actions/workflows/linter.yml)
 
 ## What this repository does
-This code is for an active GitHub Action written in Python to check (on a schedule) for new repositories created in the last 24 hours and open pull requests in the new repositories to enable GitHub advanced security code scanning.
+This code is for an active GitHub Action written in Python to check (on a schedule) for new repositories created on the previous day and open pull requests in the new repositories to enable GitHub advanced security code scanning.
 
 ## Support
 If you need support using this project or have questions about it, please [open up an issue in this repository](https://github.com/zkoppert/advanced-security-enforcer/issues). Requests made directly to GitHub staff or support team will be redirected here to open an issue. GitHub SLA's and support/services contracts do not apply to this repository.
