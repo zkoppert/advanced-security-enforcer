@@ -22,8 +22,10 @@ if __name__ == "__main__":
     organization = os.getenv("ORGANIZATION")
     gh_actor = os.getenv("GH_ACTOR")
     hours_delay = 24
-    if os.getenv("HOURS_DELAY"):
-        hours_delay = int(os.getenv("HOURS_DELAY"))
+    custom_delay = ""
+    custom_delay = os.getenv("HOURS_DELAY")
+    if custom_delay is not "":
+        hours_delay = int(custom_delay)
     date = (datetime.now() - timedelta(hours=hours_delay)).strftime("%Y-%m-%d")
     search_string = (
         "org:" + str(organization) + " created:" + str(date) + " archived:false"
