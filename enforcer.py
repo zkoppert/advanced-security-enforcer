@@ -21,12 +21,9 @@ if __name__ == "__main__":
     # Get all repos from organization
     organization = os.getenv("ORGANIZATION")
     gh_actor = os.getenv("GH_ACTOR")
-    hours_delay = 24
-    custom_delay = ""
-    custom_delay = os.getenv("HOURS_DELAY")
-    if custom_delay is not "":
-        hours_delay = int(custom_delay)
-    date = (datetime.now() - timedelta(hours=hours_delay)).strftime("%Y-%m-%d")
+    hours_delay = os.getenv("HOURS_DELAY")
+    assert hours_delay is not None
+    date = (datetime.now() - timedelta(hours=int(hours_delay))).strftime("%Y-%m-%d")
     search_string = (
         "org:" + str(organization) + " created:" + str(date) + " archived:false"
     )
