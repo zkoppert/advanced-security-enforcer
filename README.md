@@ -38,7 +38,10 @@ jobs:
 ```
 - Be sure to fill out the `env` values above with your information. More info on creating secrets can be found [here](https://docs.github.com/en/actions/security-guides/encrypted-secrets).
 - Your GitHub token will need to have read/write access to all the repositories in the organization
-- You must include the `HOURS_DELAY` value and set it to a valid `int` in order to set what date the action is looking for new repositories on. This being configurable allows users to give more time for repositories to contain code by increasing the delay. The default 24 will make the action check for repos created on the previous day to see if they have code scanning enabled. Changing the value to 72, will make the action check for repositories created 3 days ago.
+- You must include the `HOURS_DELAY` value and set it to a valid `int` in order to set what date the action is looking for new repositories on.
+  This being configurable allows users to give more time for repositories to contain code by increasing the delay.
+  The default 24 will make the action check for repos created on the previous day to see if they have code scanning enabled.
+  Changing the value to 72, will make the action check for repositories created 3 days ago.
 
 ## How it does this
 - A CRON job on GitHub actions triggers a nightly run of this script
