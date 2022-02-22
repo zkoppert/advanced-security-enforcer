@@ -8,7 +8,8 @@ import github3
 from dotenv import load_dotenv
 
 if __name__ == "__main__":
-
+    print("this always prints", flush=True)
+    
     # Load env variables from file
     dotenv_path = join(dirname(__file__), ".env")
     load_dotenv(dotenv_path)
@@ -27,6 +28,7 @@ if __name__ == "__main__":
     search_string = (
         "org:" + str(organization) + " created:" + str(date) + " archived:false"
     )
+    print(search_string, flush=True)
     allowed_languages = [
         "C",
         "C++",
@@ -41,12 +43,13 @@ if __name__ == "__main__":
     all_repos = gh.search_repositories(search_string)
 
     if all_repos.count == 0:
-        print("no repos found")
+        print("no repos found", flush=True)
     for short_repository in all_repos:
-        print(short_repository.full_name)
+        print("%s repo was created on %s", short_repository.full_name, date, flush=True)
         # check if the repo is compatible language using short_repository.languages_url
         for language in short_repository.repository.languages():
             if language[0] in allowed_languages:
+                print("%s repo is language compatible. Attempting to open a pull request", short_repository.full_name, flush=True)
                 # clone the repo
                 os.system(
                     "git clone https://%s:%s@github.com/%s"
@@ -79,4 +82,4 @@ if __name__ == "__main__":
                 os.chdir("../")
                 os.system("rm -rf %s" % short_repository.name)
                 break
-    print("done")
+    print("done", flush=True)
