@@ -45,7 +45,7 @@ if __name__ == "__main__":
     if all_repos.count == 0:
         print("no repos found", flush=True)
     for short_repository in all_repos:
-        print("%s repo was created on %s" %(short_repository.full_name, date), flush=True)
+        print("%s repo was created on %s" % (short_repository.full_name, date), flush=True)
         # check if the repo is compatible language using short_repository.languages_url
         for language in short_repository.repository.languages():
             if language[0] in allowed_languages:
