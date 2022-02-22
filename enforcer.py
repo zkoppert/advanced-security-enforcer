@@ -9,7 +9,7 @@ from dotenv import load_dotenv
 
 if __name__ == "__main__":
     print("this always prints", flush=True)
-    
+
     # Load env variables from file
     dotenv_path = join(dirname(__file__), ".env")
     load_dotenv(dotenv_path)
@@ -45,7 +45,7 @@ if __name__ == "__main__":
     if all_repos.count == 0:
         print("no repos found", flush=True)
     for short_repository in all_repos:
-        print("%s repo was created on %s", short_repository.full_name, date, flush=True)
+        print("%s repo was created on %s" %(short_repository.full_name, date), flush=True)
         # check if the repo is compatible language using short_repository.languages_url
         for language in short_repository.repository.languages():
             if language[0] in allowed_languages:
@@ -82,4 +82,6 @@ if __name__ == "__main__":
                 os.chdir("../")
                 os.system("rm -rf %s" % short_repository.name)
                 break
+        else:
+            print("No compatible languages found in repository.")
     print("done", flush=True)
