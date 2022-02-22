@@ -34,9 +34,14 @@ jobs:
         GH_TOKEN: ${{ secrets.GH_TOKEN }}
         ORGANIZATION: ${{ secrets.ORGANIZATION }}
         PR_BODY: your text goes here
+        HOURS_DELAY: 24
 ```
 - Be sure to fill out the `env` values above with your information. More info on creating secrets can be found [here](https://docs.github.com/en/actions/security-guides/encrypted-secrets).
-- Your GitHub token will need to have read/write access to all the repositories in the organization
+- Your GitHub token will need to have read/write access to all the repositories in the organization as well as the workflow permission
+- You must include the `HOURS_DELAY` value and set it to a valid `int` in order to set what date the action is looking for new repositories on.
+  This being configurable allows users to give more time for repositories to contain code by increasing the delay.
+  The default 24 will make the action check for repos created on the previous day to see if they have code scanning enabled.
+  Changing the value to 72, will make the action check for repositories created 3 days ago.
 
 ## How it does this
 - A CRON job on GitHub actions triggers a nightly run of this script
@@ -45,6 +50,16 @@ jobs:
 
 ## Contributions
 We would :heart: contributions to improve this action. Please see [CONTRIBUTING.md](./CONTRIBUTING.md) for how to get involved.
+
+## Debugging in GitHub Actions
+- Add the following lines to the workflow .yaml file
+  ```yaml
+    env:
+      ACTIONS_RUNNER_DEBUG: true
+      ACTIONS_STEP_DEBUG: true
+  ```
+- That will enable debug printing to the action log so that you can see detailed information if issues arise.
+- Setting the `HOURS_DELAY: 0` is helpful so that you can create a repository in an org and not wait to test the action against it
 
 ## Instructions to run locally
 - Clone the repository
