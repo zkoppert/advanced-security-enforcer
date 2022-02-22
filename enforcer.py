@@ -45,11 +45,17 @@ if __name__ == "__main__":
     if all_repos.count == 0:
         print("no repos found", flush=True)
     for short_repository in all_repos:
-        print("%s repo was created on %s" % (short_repository.full_name, date), flush=True)
+        print(
+            "%s repo was created on %s" % (short_repository.full_name, date), flush=True
+        )
         # check if the repo is compatible language using short_repository.languages_url
         for language in short_repository.repository.languages():
             if language[0] in allowed_languages:
-                print("%s repo is language compatible. Attempting to open a pull request", short_repository.full_name, flush=True)
+                print(
+                    "%s repo is language compatible. Attempting to open a pull request",
+                    short_repository.full_name,
+                    flush=True,
+                )
                 # clone the repo
                 os.system(
                     "git clone https://%s:%s@github.com/%s"
