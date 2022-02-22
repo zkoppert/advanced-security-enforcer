@@ -28,7 +28,7 @@ jobs:
       uses: actions/checkout@v2
     
     - name: Run enforcer tool
-      uses: docker://ghcr.io/zkoppert/advanced-security-enforcer:v1
+      uses: docker://ghcr.io/zkoppert/advanced-security-enforcer:v2
       env:
         GH_ACTOR: ${{ secrets.GH_ACTOR }}
         GH_TOKEN: ${{ secrets.GH_TOKEN }}
