@@ -36,7 +36,7 @@ jobs:
       # Run Linter against code base #
       ################################
       - name: Lint Code Base
-        uses: docker://ghcr.io/github/super-linter:latest
+        uses: docker://ghcr.io/super-linter/super-linter:latest
         env:
           DEFAULT_BRANCH: main
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
