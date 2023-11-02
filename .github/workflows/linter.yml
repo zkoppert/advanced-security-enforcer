@@ -30,13 +30,13 @@ jobs:
       # Checkout the code base #
       ##########################
       - name: Checkout Code
-        uses: actions/checkout@v2.3.4
+        uses: actions/checkout@v4
 
       ################################
       # Run Linter against code base #
       ################################
       - name: Lint Code Base
-        uses: docker://ghcr.io/github/super-linter:latest
+        uses: docker://ghcr.io/super-linter/super-linter:latest
         env:
           DEFAULT_BRANCH: main
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
