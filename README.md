@@ -25,10 +25,10 @@ jobs:
 
     steps:
     - name: Checkout code
-      uses: actions/checkout@v2
+      uses: actions/checkout@v4
     
     - name: Run enforcer tool
-      uses: docker://ghcr.io/zkoppert/advanced-security-enforcer:v2
+      uses: zkoppert/advanced-security-enforcer@v2
       env:
         GH_ACTOR: ${{ secrets.GH_ACTOR }}
         GH_TOKEN: ${{ secrets.GH_TOKEN }}
