@@ -36,9 +36,11 @@ if __name__ == "__main__":
         "Go",
         "Java",
         "JavaScript",
+        "Kotlin",
         "TypeScript",
         "Python",
         "Ruby",
+        "Swift",
     ]
     all_repos = gh.search_repositories(search_string)
 
