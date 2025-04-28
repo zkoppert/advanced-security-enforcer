@@ -66,7 +66,7 @@ We would :heart: contributions to improve this action. Please see [CONTRIBUTING.
 - Create a personal access token with repository permissions and workflow permissions
 - Copy the `.env-example` file to `.env`
 - Edit the `.env` file by adding your Personal Access Token to it and the desired organization
-- Install dependencies `pip install -r requirements.txt`
+- Install dependencies `python -m pip install -r requirements.txt`
 - Run the code `python3 enforcer.py`
 - Note the log output for details on any pull requests that were opened
 - After running locally this will have changed your git config user.name and user.email so those should be reset for this repository
