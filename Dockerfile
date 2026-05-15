@@ -1,4 +1,4 @@
-FROM python:3.14.3-slim
+FROM python:3.14.5-slim
 
 WORKDIR /action/workspace
 COPY codeql.yml requirements.txt enforcer.py /action/workspace/
